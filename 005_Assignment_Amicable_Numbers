@@ -1,0 +1,16 @@
+for i in range(10000,0,-1):
+  top=0
+  for j in range(1,10001):
+    if i % j == 0 :
+      top += j
+  top -= i
+  top2 = 0
+  for y in range(1, top+1):
+    if top % y == 0 :
+      top2 += y
+  top2 -= y
+  amicable = []
+  if top2 == i and top == y and i != y :
+    amicable.append([i,y])
+    print(amicable)  
+    amicable = list(map(sorted,amicable))
